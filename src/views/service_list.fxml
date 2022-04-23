@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="358.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.PayServiceListController">
+   <children>
+      <Button layoutX="20.0" layoutY="291.0" mnemonicParsing="false" onAction="#payByService" style="-fx-background-color: RED;" text="Оплатити" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="164.0" layoutY="14.0" text="Послуги" textFill="RED">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="41.0" text="Оберіть:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="283.0" layoutY="291.0" mnemonicParsing="false" onAction="#closeOperation" style="-fx-background-color: RED;" text="Скасувати" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <VBox layoutX="20.0" layoutY="61.0" prefHeight="200.0" prefWidth="308.0">
+         <children>
+            <RadioButton fx:id="payStudyBtn" mnemonicParsing="false" text="Семестр навчання - 5000грн">
+               <toggleGroup>
+                  <ToggleGroup fx:id="payment" />
+               </toggleGroup>
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="payGasBtn" mnemonicParsing="false" text="Газ - 3000грн" toggleGroup="$payment">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin></RadioButton>
+            <RadioButton fx:id="payWaterBtn" mnemonicParsing="false" text="Вода - 500грн" toggleGroup="$payment">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin></RadioButton>
+            <RadioButton fx:id="payElectricBtn" mnemonicParsing="false" text="Електроенергія - 300грн" toggleGroup="$payment">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin></RadioButton>
+            <RadioButton fx:id="payInternetBtn" mnemonicParsing="false" text="Інтернет - 200грн" toggleGroup="$payment">
+               <font>
+                  <Font size="14.0" />
+               </font></RadioButton>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
